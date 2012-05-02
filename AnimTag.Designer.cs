@@ -34,10 +34,10 @@
             this.animSearchBox = new System.Windows.Forms.TextBox();
             this.AssignAnimationBox = new System.Windows.Forms.ListBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.ActiveTagsLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tagSearchBox = new System.Windows.Forms.TextBox();
             this.AllTagsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SelectPage = new System.Windows.Forms.TabPage();
-            this.ActiveTagsLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControl1.SuspendLayout();
             this.AssignPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -101,9 +101,9 @@
             // 
             // AssignAnimationBox
             // 
-            this.AssignAnimationBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.AssignAnimationBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AssignAnimationBox.FormattingEnabled = true;
             this.AssignAnimationBox.Location = new System.Drawing.Point(5, 26);
             this.AssignAnimationBox.Name = "AssignAnimationBox";
@@ -131,6 +131,14 @@
             this.splitContainer2.SplitterDistance = 163;
             this.splitContainer2.TabIndex = 0;
             // 
+            // ActiveTagsLayoutPanel
+            // 
+            this.ActiveTagsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ActiveTagsLayoutPanel.Location = new System.Drawing.Point(0, 0);
+            this.ActiveTagsLayoutPanel.Name = "ActiveTagsLayoutPanel";
+            this.ActiveTagsLayoutPanel.Size = new System.Drawing.Size(748, 163);
+            this.ActiveTagsLayoutPanel.TabIndex = 0;
+            // 
             // tagSearchBox
             // 
             this.tagSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
@@ -142,9 +150,9 @@
             // 
             // AllTagsFlowLayoutPanel
             // 
-            this.AllTagsFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.AllTagsFlowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AllTagsFlowLayoutPanel.Location = new System.Drawing.Point(3, 26);
             this.AllTagsFlowLayoutPanel.Name = "AllTagsFlowLayoutPanel";
             this.AllTagsFlowLayoutPanel.Size = new System.Drawing.Size(740, 476);
@@ -159,14 +167,6 @@
             this.SelectPage.TabIndex = 1;
             this.SelectPage.Text = "Select";
             this.SelectPage.UseVisualStyleBackColor = true;
-            // 
-            // ActiveTagsLayoutPanel
-            // 
-            this.ActiveTagsLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ActiveTagsLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.ActiveTagsLayoutPanel.Name = "ActiveTagsLayoutPanel";
-            this.ActiveTagsLayoutPanel.Size = new System.Drawing.Size(748, 163);
-            this.ActiveTagsLayoutPanel.TabIndex = 0;
             // 
             // AnimTagForm
             // 

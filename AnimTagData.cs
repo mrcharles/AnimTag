@@ -9,7 +9,7 @@ namespace AnimTag
     class Anim
     {
         public int id;
-        public string name;
+        public string name { get; set; }
 
         public Anim(int _id, string _name)
         {
@@ -56,7 +56,7 @@ namespace AnimTag
 
     class AnimTagData
     {
-        Dictionary<string, Anim> Animations;
+        public Dictionary<string, Anim> Animations;
         Dictionary<string, Tag> Tags;
         HashSet<AnimTagPair> AnimTagPairs;
 
@@ -88,7 +88,22 @@ namespace AnimTag
             return tags;
         }
 
-        List<Tag> GetTagsForAnim(Anim anim)
+        public List<Anim> GetAllAnims()
+        {
+            List<Anim> ret = new List<Anim>(Animations.Values);
+            ret.Sort((a, b) => a.name.CompareTo(b.name));
+            return ret;
+        }
+
+        public List<Tag> GetAllTags()
+        {
+            List<Tag> ret =  new List<Tag>(Tags.Values);
+            ret.Sort( (a, b) => a.name.CompareTo(b.name) );
+            return ret;
+        }
+
+
+        public List<Tag> GetTagsForAnim(Anim anim)
         {
             IEnumerable<AnimTagPair> query = AnimTagPairs.Where(pair => pair.anim == anim.name);
             List<Tag> results = new List<Tag>();
@@ -100,7 +115,7 @@ namespace AnimTag
             return results;
         }
 
-        List<Anim> GetAnimsForTag(Tag tag)
+        public List<Anim> GetAnimsForTag(Tag tag)
         {
             List<Anim> results = new List<Anim>();
 
@@ -112,7 +127,7 @@ namespace AnimTag
             return results;
         }
 
-        void AddTag(string animname, string tagname)
+        public void AddTag(string animname, string tagname)
         {
             Anim anim = Animations[animname];
             Tag tag = Tags[tagname];
@@ -126,13 +141,16 @@ namespace AnimTag
             return new HashSet<AnimTagPair>();
         }
 
-        public void LoadData()
+        void LoadData()
         {
             Animations = LoadAnims();
             Tags = LoadTags();
             AnimTagPairs = LoadPairs();
         }
 
-
+        public AnimTagData()
+        {
+            LoadData();
+        }
     }
 }
